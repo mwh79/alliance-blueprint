@@ -137,50 +137,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Intro + Why Us, dense two-column */}
-      <section id="about" className="border-b border-border bg-secondary">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:grid-cols-3">
-          <div className="md:col-span-2">
-            <div className="text-xs font-bold uppercase tracking-widest text-accent">About The Company</div>
-            <h2 className="mt-1 text-3xl font-black uppercase text-primary">Welcome to Alliance General Contractors</h2>
-            <p className="mt-4 text-sm leading-relaxed text-foreground">
-              Alliance General Contractors Inc. is a fully licensed and insured construction company headquartered at <strong>84-57 249th Street in Bellerose, Queens, New York 11426</strong>. Since 2019 we have been serving homeowners, landlords, property managers and business owners across the five boroughs and Nassau County. We are a hands-on, owner-operated firm — when you hire Alliance, you work directly with the people doing the building.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-foreground">
-              Our crews handle every phase of construction in-house: framing, plumbing, electrical, HVAC, masonry, roofing, drywall, tile, flooring and finish carpentry. We pull permits, deal with the Department of Buildings, schedule inspections and clean up after ourselves every single day. We pride ourselves on showing up when we say we will, sticking to written estimates, and finishing the job — three things that should be standard but rarely are.
-            </p>
-            <h3 className="mt-6 text-lg font-black uppercase text-primary">Why Homeowners Choose Alliance</h3>
-            <ul className="mt-2 grid grid-cols-1 gap-x-6 gap-y-1 text-sm md:grid-cols-2">
-              {[
-                "Free, no-obligation written estimates",
-                "Transparent pricing — no hidden change orders",
-                "All trades performed in-house",
-                "Full DOB permit & expediting service",
-                "Workers' Comp & General Liability insured",
-                "Lead-Safe Renovator certified",
-                "10-year workmanship warranty available",
-                "References from your own neighborhood",
-              ].map(x => <li key={x} className="border-l-4 border-accent pl-2">{x}</li>)}
-            </ul>
-          </div>
-          <aside className="border-2 border-primary bg-card p-5">
-            <div className="border-b-2 border-accent pb-2 text-lg font-black uppercase text-primary">Get a Free Estimate</div>
-            <form className="mt-3 grid gap-2 text-sm">
-              <input className="border border-input bg-background px-3 py-2" placeholder="Full Name" />
-              <input className="border border-input bg-background px-3 py-2" placeholder="Phone Number" />
-              <input className="border border-input bg-background px-3 py-2" placeholder="Email Address" />
-              <select className="border border-input bg-background px-3 py-2">
-                <option>Service Needed…</option>
-                {services.map(s => <option key={s.t}>{s.t}</option>)}
-              </select>
-              <textarea className="border border-input bg-background px-3 py-2" rows={3} placeholder="Briefly describe your project" />
-              <button type="button" className="bg-accent py-3 font-black uppercase text-accent-foreground hover:brightness-95">Request Estimate</button>
-              <div className="text-center text-xs text-muted-foreground">Or call <a href={PHONE_HREF} className="font-bold text-primary">{PHONE}</a></div>
-            </form>
-          </aside>
-        </div>
-      </section>
-
       {/* Services grid */}
       <section id="services" className="border-b border-border">
         <div className="mx-auto max-w-7xl px-4 py-12">
@@ -203,6 +159,38 @@ function Index() {
         </div>
       </section>
 
+      {/* About / Why Us */}
+      <section id="about" className="border-b border-border bg-secondary">
+        <div className="mx-auto max-w-7xl px-4 py-12">
+          <div className="text-xs font-bold uppercase tracking-widest text-accent">About The Company</div>
+          <h2 className="mt-1 text-3xl font-black uppercase text-primary">Welcome to Alliance General Contractors</h2>
+          <div className="mt-4 grid gap-8 md:grid-cols-2">
+            <div>
+              <p className="text-sm leading-relaxed text-foreground">
+                Alliance General Contractors Inc. is a fully licensed and insured construction company headquartered at <strong>84-57 249th Street in Bellerose, Queens, New York 11426</strong>. Since 2019 we have been serving homeowners, landlords, property managers and business owners across the five boroughs and Nassau County. We are a hands-on, owner-operated firm — when you hire Alliance, you work directly with the people doing the building.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-foreground">
+                Our crews handle every phase of construction in-house: framing, plumbing, electrical, HVAC, masonry, roofing, drywall, tile, flooring and finish carpentry. We pull permits, deal with the Department of Buildings, schedule inspections and clean up after ourselves every single day. We pride ourselves on showing up when we say we will, sticking to written estimates, and finishing the job — three things that should be standard but rarely are.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-black uppercase text-primary">Why Homeowners Choose Alliance</h3>
+              <ul className="mt-2 grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+                {[
+                  "Free, no-obligation written estimates",
+                  "Transparent pricing — no hidden change orders",
+                  "All trades performed in-house",
+                  "Full DOB permit & expediting service",
+                  "Workers' Comp & General Liability insured",
+                  "Lead-Safe Renovator certified",
+                  "10-year workmanship warranty available",
+                  "References from your own neighborhood",
+                ].map(x => <li key={x} className="border-l-4 border-accent pl-2">{x}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Hours / Map */}
       <section id="service-area" className="border-b border-border bg-secondary">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:grid-cols-2">
