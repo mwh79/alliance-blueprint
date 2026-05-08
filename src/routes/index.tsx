@@ -32,12 +32,6 @@ const services = [
   { t: "Violation Removal", d: "DOB & ECB violation removal, permit expediting and Certificate of Occupancy work." },
 ];
 
-const areas = [
-  "Bellerose", "Floral Park", "Glen Oaks", "Bayside", "Douglaston", "Little Neck",
-  "Whitestone", "Flushing", "Fresh Meadows", "Jamaica Estates", "Forest Hills", "Kew Gardens",
-  "Astoria", "Long Island City", "Garden City", "New Hyde Park", "Great Neck", "Manhasset",
-];
-
 const stats = [
   { n: "15+", l: "Years Experience" },
   { n: "500+", l: "Projects Completed" },
@@ -79,7 +73,7 @@ function Index() {
             </div>
           </div>
           <nav className="flex flex-wrap gap-1 text-sm font-semibold uppercase">
-            {["Home","Services","Projects","About","Service Area","Reviews","Contact"].map(l => (
+            {["Home","Services","About","Coverage","Reviews","Contact"].map(l => (
               <a key={l} href={`#${l.toLowerCase().replace(/\s/g,"-")}`} className="px-3 py-2 hover:bg-secondary">{l}</a>
             ))}
             <a href={PHONE_HREF} className="ml-2 bg-accent px-4 py-2 font-black text-accent-foreground hover:brightness-95">FREE ESTIMATE</a>
@@ -89,16 +83,16 @@ function Index() {
 
       {/* Hero */}
       <section id="home" className="relative">
-        <div className="relative h-[460px] w-full overflow-hidden">
+        <div className="relative h-[calc(100vh-104px)] min-h-[520px] w-full overflow-hidden">
           <img src={heroImg} alt="Alliance General Contractors crew on a Queens NY job site" width={1600} height={900} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[var(--brand-dark)]/65" />
           <div className="absolute inset-0 mx-auto flex max-w-7xl flex-col justify-center px-4 text-primary-foreground">
-            <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Queens · Brooklyn · Bronx · Manhattan · Long Island</span>
+            <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs · Queens · Brooklyn · Bronx · Manhattan · Staten Island · Long Island</span>
             <h1 className="max-w-3xl text-4xl font-black uppercase leading-tight md:text-5xl">
               Queens' Trusted General Contractor for Residential & Commercial Construction
             </h1>
             <p className="mt-4 max-w-2xl text-base text-white/90 md:text-lg">
-              Family-operated since 2019 and serving all of NYC from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
+              Family-operated since 2019 and serving all five boroughs of NYC plus Long Island from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href={PHONE_HREF} className="bg-accent px-6 py-3 font-black uppercase text-accent-foreground shadow-md hover:brightness-95">📞 Call {PHONE}</a>
@@ -191,41 +185,15 @@ function Index() {
         </div>
       </section>
 
-      {/* Process */}
-      <section id="projects" className="bg-[var(--brand-dark)] text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 py-12">
-          <div className="text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">How We Work</div>
-          <h2 className="text-3xl font-black uppercase">Our 5-Step Process</h2>
-          <ol className="mt-6 grid gap-4 md:grid-cols-5">
-            {[
-              ["Free Estimate","We visit your property, scope the work and provide a detailed written quote — usually within 24 hours."],
-              ["Contract & Permits","Clear written contract. We file all DOB permits and schedule required inspections."],
-              ["Materials","We order materials with you or per spec — name brands, no bait & switch."],
-              ["Construction","Daily clean-up, dust barriers, and a single project manager you can call any time."],
-              ["Final Walk-Through","Punch list, final inspection sign-off, and warranty paperwork in your hands."],
-            ].map(([t,d],i) => (
-              <li key={t} className="border-t-4 border-accent bg-white/5 p-4">
-                <div className="text-3xl font-black text-[var(--brand-yellow)]">{i+1}</div>
-                <div className="mt-1 text-sm font-black uppercase">{t}</div>
-                <p className="mt-1 text-xs text-white/80">{d}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Service Area + Hours / Map */}
+      {/* Hours / Map */}
       <section id="service-area" className="border-b border-border bg-secondary">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:grid-cols-2">
           <div>
-            <div className="text-xs font-bold uppercase tracking-widest text-accent">Where We Work</div>
-            <h2 className="text-3xl font-black uppercase text-primary">Service Area</h2>
+            <div className="text-xs font-bold uppercase tracking-widest text-accent">Coverage & Hours</div>
+            <h2 className="text-3xl font-black uppercase text-primary">Serving All 5 Boroughs of NYC</h2>
             <p className="mt-2 text-sm text-foreground">
-              Based in Bellerose, Queens — we serve all of NYC and Nassau County. We are most active in the following neighborhoods:
+              Headquartered in Bellerose, Queens — Alliance General Contractors proudly operates across all five boroughs of New York City: <strong>Queens, Brooklyn, the Bronx, Manhattan and Staten Island</strong> — plus Nassau County and western Long Island. Free on-site estimates anywhere in our service area.
             </p>
-            <ul className="mt-4 grid grid-cols-2 gap-y-1 text-sm md:grid-cols-3">
-              {areas.map(a => <li key={a}>▸ {a}, NY</li>)}
-            </ul>
             <div className="mt-6 border-2 border-primary bg-card p-4 text-sm">
               <div className="font-black uppercase text-primary">Office Hours</div>
               <table className="mt-2 w-full">
