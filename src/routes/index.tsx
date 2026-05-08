@@ -86,24 +86,42 @@ function Index() {
         <div className="relative h-[calc(100vh-104px)] min-h-[520px] w-full overflow-hidden">
           <img src={heroImg} alt="Alliance General Contractors crew on a Queens NY job site" width={1600} height={900} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[var(--brand-dark)]/65" />
-          <div className="absolute inset-0 mx-auto flex max-w-7xl flex-col justify-center px-4 text-primary-foreground">
-            <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs · Queens · Brooklyn · Bronx · Manhattan · Staten Island · Long Island</span>
-            <h1 className="max-w-3xl text-4xl font-black uppercase leading-tight md:text-5xl">
-              Queens' Trusted General Contractor for Residential & Commercial Construction
-            </h1>
-            <p className="mt-4 max-w-2xl text-base text-white/90 md:text-lg">
-              Family-operated since 2019 and serving all five boroughs of NYC plus Long Island from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href={PHONE_HREF} className="bg-accent px-6 py-3 font-black uppercase text-accent-foreground shadow-md hover:brightness-95">📞 Call {PHONE}</a>
-              <a href="#contact" className="border-2 border-white px-6 py-3 font-black uppercase text-white hover:bg-white hover:text-[var(--brand-dark)]">Request Free Estimate</a>
+          <div className="absolute inset-0 mx-auto grid max-w-7xl items-center gap-6 px-4 py-6 text-primary-foreground lg:grid-cols-5">
+            <div className="lg:col-span-3">
+              <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs · Queens · Brooklyn · Bronx · Manhattan · Staten Island · Long Island</span>
+              <h1 className="text-3xl font-black uppercase leading-tight md:text-5xl">
+                Queens' Trusted General Contractor for Residential & Commercial Construction
+              </h1>
+              <p className="mt-4 max-w-2xl text-sm text-white/90 md:text-base">
+                Family-operated since 2019 and serving all five boroughs of NYC plus Long Island from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a href={PHONE_HREF} className="bg-accent px-5 py-3 font-black uppercase text-accent-foreground shadow-md hover:brightness-95">📞 Call {PHONE}</a>
+                <a href="#services" className="border-2 border-white px-5 py-3 font-black uppercase text-white hover:bg-white hover:text-[var(--brand-dark)]">View Services</a>
+              </div>
+              <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-1 text-sm md:grid-cols-4">
+                <li>✔ Licensed & Insured</li>
+                <li>✔ Free On-Site Estimates</li>
+                <li>✔ Workers' Comp Coverage</li>
+                <li>✔ Permit & DOB Filings</li>
+              </ul>
             </div>
-            <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-1 text-sm md:grid-cols-4">
-              <li>✔ Licensed & Insured</li>
-              <li>✔ Free On-Site Estimates</li>
-              <li>✔ Workers' Comp Coverage</li>
-              <li>✔ Permit & DOB Filings</li>
-            </ul>
+            <aside className="border-2 border-primary bg-card p-4 text-foreground shadow-2xl lg:col-span-2">
+              <div className="border-b-2 border-accent pb-2 text-lg font-black uppercase text-primary">Get a Free Estimate</div>
+              <p className="mt-1 text-xs text-muted-foreground">No obligation · Fast response · Family-operated</p>
+              <form className="mt-3 grid gap-2 text-sm">
+                <input className="border border-input bg-background px-3 py-2" placeholder="Full Name" />
+                <input className="border border-input bg-background px-3 py-2" placeholder="Phone Number" />
+                <input className="border border-input bg-background px-3 py-2" placeholder="Email Address" />
+                <select className="border border-input bg-background px-3 py-2">
+                  <option>Service Needed…</option>
+                  {services.map(s => <option key={s.t}>{s.t}</option>)}
+                </select>
+                <textarea className="border border-input bg-background px-3 py-2" rows={2} placeholder="Briefly describe your project" />
+                <button type="button" className="bg-accent py-3 font-black uppercase text-accent-foreground hover:brightness-95">Request Estimate</button>
+                <div className="text-center text-xs text-muted-foreground">Or call <a href={PHONE_HREF} className="font-bold text-primary">{PHONE}</a></div>
+              </form>
+            </aside>
           </div>
         </div>
         {/* Stats strip */}
@@ -116,50 +134,6 @@ function Index() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Intro + Why Us, dense two-column */}
-      <section id="about" className="border-b border-border bg-secondary">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:grid-cols-3">
-          <div className="md:col-span-2">
-            <div className="text-xs font-bold uppercase tracking-widest text-accent">About The Company</div>
-            <h2 className="mt-1 text-3xl font-black uppercase text-primary">Welcome to Alliance General Contractors</h2>
-            <p className="mt-4 text-sm leading-relaxed text-foreground">
-              Alliance General Contractors Inc. is a fully licensed and insured construction company headquartered at <strong>84-57 249th Street in Bellerose, Queens, New York 11426</strong>. Since 2019 we have been serving homeowners, landlords, property managers and business owners across the five boroughs and Nassau County. We are a hands-on, owner-operated firm — when you hire Alliance, you work directly with the people doing the building.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-foreground">
-              Our crews handle every phase of construction in-house: framing, plumbing, electrical, HVAC, masonry, roofing, drywall, tile, flooring and finish carpentry. We pull permits, deal with the Department of Buildings, schedule inspections and clean up after ourselves every single day. We pride ourselves on showing up when we say we will, sticking to written estimates, and finishing the job — three things that should be standard but rarely are.
-            </p>
-            <h3 className="mt-6 text-lg font-black uppercase text-primary">Why Homeowners Choose Alliance</h3>
-            <ul className="mt-2 grid grid-cols-1 gap-x-6 gap-y-1 text-sm md:grid-cols-2">
-              {[
-                "Free, no-obligation written estimates",
-                "Transparent pricing — no hidden change orders",
-                "All trades performed in-house",
-                "Full DOB permit & expediting service",
-                "Workers' Comp & General Liability insured",
-                "Lead-Safe Renovator certified",
-                "10-year workmanship warranty available",
-                "References from your own neighborhood",
-              ].map(x => <li key={x} className="border-l-4 border-accent pl-2">{x}</li>)}
-            </ul>
-          </div>
-          <aside className="border-2 border-primary bg-card p-5">
-            <div className="border-b-2 border-accent pb-2 text-lg font-black uppercase text-primary">Get a Free Estimate</div>
-            <form className="mt-3 grid gap-2 text-sm">
-              <input className="border border-input bg-background px-3 py-2" placeholder="Full Name" />
-              <input className="border border-input bg-background px-3 py-2" placeholder="Phone Number" />
-              <input className="border border-input bg-background px-3 py-2" placeholder="Email Address" />
-              <select className="border border-input bg-background px-3 py-2">
-                <option>Service Needed…</option>
-                {services.map(s => <option key={s.t}>{s.t}</option>)}
-              </select>
-              <textarea className="border border-input bg-background px-3 py-2" rows={3} placeholder="Briefly describe your project" />
-              <button type="button" className="bg-accent py-3 font-black uppercase text-accent-foreground hover:brightness-95">Request Estimate</button>
-              <div className="text-center text-xs text-muted-foreground">Or call <a href={PHONE_HREF} className="font-bold text-primary">{PHONE}</a></div>
-            </form>
-          </aside>
         </div>
       </section>
 
@@ -185,6 +159,38 @@ function Index() {
         </div>
       </section>
 
+      {/* About / Why Us */}
+      <section id="about" className="border-b border-border bg-secondary">
+        <div className="mx-auto max-w-7xl px-4 py-12">
+          <div className="text-xs font-bold uppercase tracking-widest text-accent">About The Company</div>
+          <h2 className="mt-1 text-3xl font-black uppercase text-primary">Welcome to Alliance General Contractors</h2>
+          <div className="mt-4 grid gap-8 md:grid-cols-2">
+            <div>
+              <p className="text-sm leading-relaxed text-foreground">
+                Alliance General Contractors Inc. is a fully licensed and insured construction company headquartered at <strong>84-57 249th Street in Bellerose, Queens, New York 11426</strong>. Since 2019 we have been serving homeowners, landlords, property managers and business owners across the five boroughs and Nassau County. We are a hands-on, owner-operated firm — when you hire Alliance, you work directly with the people doing the building.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-foreground">
+                Our crews handle every phase of construction in-house: framing, plumbing, electrical, HVAC, masonry, roofing, drywall, tile, flooring and finish carpentry. We pull permits, deal with the Department of Buildings, schedule inspections and clean up after ourselves every single day. We pride ourselves on showing up when we say we will, sticking to written estimates, and finishing the job — three things that should be standard but rarely are.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-black uppercase text-primary">Why Homeowners Choose Alliance</h3>
+              <ul className="mt-2 grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+                {[
+                  "Free, no-obligation written estimates",
+                  "Transparent pricing — no hidden change orders",
+                  "All trades performed in-house",
+                  "Full DOB permit & expediting service",
+                  "Workers' Comp & General Liability insured",
+                  "Lead-Safe Renovator certified",
+                  "10-year workmanship warranty available",
+                  "References from your own neighborhood",
+                ].map(x => <li key={x} className="border-l-4 border-accent pl-2">{x}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Hours / Map */}
       <section id="service-area" className="border-b border-border bg-secondary">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:grid-cols-2">
