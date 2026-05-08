@@ -50,66 +50,64 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground font-sans">
       {/* Top utility bar */}
       <div className="bg-[var(--brand-dark)] text-primary-foreground text-xs">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-2">
-          <div className="flex flex-wrap gap-x-5 gap-y-1">
-            <span>📍 {ADDRESS}</span>
-            <span>🕒 Mon–Sat 7:00 AM – 7:00 PM · Sun by appointment</span>
-          </div>
-          <div className="flex gap-x-5">
-            <span>NYC HIC Lic. · Fully Insured · Bonded</span>
-            <a href={PHONE_HREF} className="font-bold text-[var(--brand-yellow)] hover:underline">📞 {PHONE}</a>
-          </div>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-1 px-4 py-2">
+          <span className="hidden sm:inline">📍 {ADDRESS}</span>
+          <span className="hidden md:inline">🕒 Mon–Sat 7AM–7PM</span>
+          <span className="hidden lg:inline">NYC HIC Lic. · Fully Insured · Bonded</span>
+          <a href={PHONE_HREF} className="font-bold text-[var(--brand-yellow)] hover:underline sm:ml-auto">📞 {PHONE}</a>
         </div>
       </div>
 
       {/* Header */}
       <header className="border-b-4 border-accent bg-card">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-          <div className="flex items-center gap-3">
-            <div className="flex h-14 w-14 items-center justify-center bg-primary text-primary-foreground font-black text-2xl">A</div>
-            <div>
-              <div className="text-xl font-black uppercase tracking-tight text-primary leading-tight">Alliance General<br/>Contractors Inc.</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Building Trust With Quality Work · Est. 2019</div>
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary text-primary-foreground font-black text-xl sm:h-14 sm:w-14 sm:text-2xl">A</div>
+            <div className="min-w-0">
+              <div className="text-sm font-black uppercase tracking-tight text-primary leading-tight sm:text-xl">Alliance General<br className="hidden sm:inline"/> Contractors Inc.</div>
+              <div className="hidden text-xs uppercase tracking-widest text-muted-foreground sm:block">Building Trust With Quality Work · Est. 2019</div>
             </div>
           </div>
-          <nav className="flex flex-wrap gap-1 text-sm font-semibold uppercase">
-            {["Home","Services","About","Coverage","Reviews","Contact"].map(l => (
-              <a key={l} href={`#${l.toLowerCase().replace(/\s/g,"-")}`} className="px-3 py-2 hover:bg-secondary">{l}</a>
-            ))}
-            <a href={PHONE_HREF} className="ml-2 bg-accent px-4 py-2 font-black text-accent-foreground hover:brightness-95">FREE ESTIMATE</a>
+          <nav className="flex items-center gap-1 text-sm font-semibold uppercase">
+            <div className="hidden lg:flex">
+              {["Home","Services","About","Coverage","Reviews","Contact"].map(l => (
+                <a key={l} href={`#${l.toLowerCase().replace(/\s/g,"-")}`} className="px-3 py-2 hover:bg-secondary">{l}</a>
+              ))}
+            </div>
+            <a href={PHONE_HREF} className="bg-accent px-3 py-2 text-xs font-black text-accent-foreground hover:brightness-95 sm:px-4 sm:text-sm">FREE ESTIMATE</a>
           </nav>
         </div>
       </header>
 
       {/* Hero */}
       <section id="home" className="relative">
-        <div className="relative flex min-h-[calc(100dvh-64px)] w-full flex-col overflow-hidden lg:h-[calc(100dvh-104px)]">
-          <img src={heroImg} alt="Alliance General Contractors crew on a Queens NY job site" width={1600} height={900} className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-[var(--brand-dark)]/65" />
-          <div className="absolute inset-x-0 top-0 bottom-[68px] mx-auto grid max-w-7xl items-center gap-6 overflow-y-auto px-4 py-4 text-primary-foreground lg:bottom-[72px] lg:grid-cols-5">
+        <div className="relative flex w-full flex-col overflow-hidden">
+          <img src={heroImg} alt="Alliance General Contractors crew on a Queens NY job site" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-[var(--brand-dark)]/70" />
+          <div className="relative mx-auto grid w-full max-w-7xl items-center gap-5 px-4 py-6 text-primary-foreground sm:py-8 lg:grid-cols-5 lg:gap-6 lg:py-10">
             <div className="lg:col-span-3">
-              <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs of NYC & Long Island</span>
-              <h1 className="text-3xl font-black uppercase leading-tight md:text-5xl">
+              <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[var(--brand-yellow)] sm:text-xs">Serving All 5 Boroughs of NYC & Long Island</span>
+              <h1 className="text-2xl font-black uppercase leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
                 Alliance General Contractors Inc.
               </h1>
-              <p className="mt-4 max-w-2xl text-sm text-white/90 md:text-base">
+              <p className="mt-3 max-w-2xl text-xs text-white/90 sm:text-sm md:text-base">
                 Serving all five boroughs of NYC plus Long Island from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
               </p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                <a href={PHONE_HREF} className="bg-accent px-5 py-3 font-black uppercase text-accent-foreground shadow-md hover:brightness-95">📞 Call {PHONE}</a>
-                <a href="#services" className="border-2 border-white px-5 py-3 font-black uppercase text-white hover:bg-white hover:text-[var(--brand-dark)]">View Services</a>
+              <div className="mt-4 flex flex-wrap gap-2 sm:gap-3">
+                <a href={PHONE_HREF} className="bg-accent px-4 py-2.5 text-xs font-black uppercase text-accent-foreground shadow-md hover:brightness-95 sm:px-5 sm:py-3 sm:text-sm">📞 Call {PHONE}</a>
+                <a href="#services" className="border-2 border-white px-4 py-2.5 text-xs font-black uppercase text-white hover:bg-white hover:text-[var(--brand-dark)] sm:px-5 sm:py-3 sm:text-sm">View Services</a>
               </div>
-              <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-1 text-sm md:grid-cols-4">
+              <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-xs sm:text-sm md:grid-cols-4">
                 <li>✔ Licensed & Insured</li>
-                <li>✔ Free On-Site Estimates</li>
-                <li>✔ Workers' Comp Coverage</li>
-                <li>✔ Permit & DOB Filings</li>
+                <li>✔ Free Estimates</li>
+                <li>✔ Workers' Comp</li>
+                <li>✔ DOB Filings</li>
               </ul>
             </div>
-            <aside className="border-2 border-primary bg-card p-4 text-foreground shadow-2xl lg:col-span-2">
-              <div className="border-b-2 border-accent pb-2 text-lg font-black uppercase text-primary">Get a Free Estimate</div>
-              <p className="mt-1 text-xs text-muted-foreground">No obligation · Fast response · Family-operated</p>
-              <form className="mt-3 grid gap-2 text-sm">
+            <aside className="border-2 border-primary bg-card p-3 text-foreground shadow-2xl sm:p-4 lg:col-span-2">
+              <div className="border-b-2 border-accent pb-2 text-base font-black uppercase text-primary sm:text-lg">Get a Free Estimate</div>
+              <p className="mt-1 text-xs text-muted-foreground">No obligation · Fast response</p>
+              <form className="mt-2 grid gap-2 text-sm sm:mt-3">
                 <input className="border border-input bg-background px-3 py-2" placeholder="Full Name" />
                 <input className="border border-input bg-background px-3 py-2" placeholder="Phone Number" />
                 <input className="border border-input bg-background px-3 py-2" placeholder="Email Address" />
@@ -118,18 +116,17 @@ function Index() {
                   {services.map(s => <option key={s.t}>{s.t}</option>)}
                 </select>
                 <textarea className="border border-input bg-background px-3 py-2" rows={2} placeholder="Briefly describe your project" />
-                <button type="button" className="bg-accent py-3 font-black uppercase text-accent-foreground hover:brightness-95">Request Estimate</button>
-                <div className="text-center text-xs text-muted-foreground">Or call <a href={PHONE_HREF} className="font-bold text-primary">{PHONE}</a></div>
+                <button type="button" className="bg-accent py-2.5 font-black uppercase text-accent-foreground hover:brightness-95 sm:py-3">Request Estimate</button>
               </form>
             </aside>
           </div>
           {/* Stats strip */}
-          <div className="absolute inset-x-0 bottom-0 bg-accent">
+          <div className="relative bg-accent">
             <div className="mx-auto grid max-w-7xl grid-cols-4 divide-x divide-accent-foreground/20">
               {stats.map(s => (
-                <div key={s.l} className="px-2 py-2 text-center text-accent-foreground md:py-3">
-                  <div className="text-lg font-black md:text-2xl">{s.n}</div>
-                  <div className="text-[10px] font-semibold uppercase tracking-wider md:text-xs">{s.l}</div>
+                <div key={s.l} className="px-1 py-2 text-center text-accent-foreground sm:px-2 md:py-3">
+                  <div className="text-base font-black sm:text-lg md:text-2xl">{s.n}</div>
+                  <div className="text-[9px] font-semibold uppercase leading-tight tracking-wider sm:text-[10px] md:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
