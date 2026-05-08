@@ -83,10 +83,10 @@ function Index() {
 
       {/* Hero */}
       <section id="home" className="relative">
-        <div className="relative h-[calc(100vh-104px)] min-h-[520px] w-full overflow-hidden">
+        <div className="relative flex h-[calc(100vh-104px)] min-h-[560px] w-full flex-col overflow-hidden">
           <img src={heroImg} alt="Alliance General Contractors crew on a Queens NY job site" width={1600} height={900} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[var(--brand-dark)]/65" />
-          <div className="absolute inset-0 mx-auto grid max-w-7xl items-center gap-6 px-4 py-6 text-primary-foreground lg:grid-cols-5">
+          <div className="absolute inset-x-0 top-0 bottom-[88px] mx-auto grid max-w-7xl items-center gap-6 px-4 py-6 text-primary-foreground lg:grid-cols-5">
             <div className="lg:col-span-3">
               <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs of NYC & Long Island</span>
               <h1 className="text-3xl font-black uppercase leading-tight md:text-5xl">
@@ -123,16 +123,16 @@ function Index() {
               </form>
             </aside>
           </div>
-        </div>
-        {/* Stats strip */}
-        <div className="bg-accent">
-          <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-accent-foreground/20 md:grid-cols-4">
-            {stats.map(s => (
-              <div key={s.l} className="px-4 py-5 text-center text-accent-foreground">
-                <div className="text-3xl font-black">{s.n}</div>
-                <div className="text-xs font-semibold uppercase tracking-wider">{s.l}</div>
-              </div>
-            ))}
+          {/* Stats strip */}
+          <div className="absolute inset-x-0 bottom-0 bg-accent">
+            <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-accent-foreground/20 md:grid-cols-4">
+              {stats.map(s => (
+                <div key={s.l} className="px-4 py-4 text-center text-accent-foreground">
+                  <div className="text-2xl font-black md:text-3xl">{s.n}</div>
+                  <div className="text-xs font-semibold uppercase tracking-wider">{s.l}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
