@@ -191,41 +191,15 @@ function Index() {
         </div>
       </section>
 
-      {/* Process */}
-      <section id="projects" className="bg-[var(--brand-dark)] text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 py-12">
-          <div className="text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">How We Work</div>
-          <h2 className="text-3xl font-black uppercase">Our 5-Step Process</h2>
-          <ol className="mt-6 grid gap-4 md:grid-cols-5">
-            {[
-              ["Free Estimate","We visit your property, scope the work and provide a detailed written quote — usually within 24 hours."],
-              ["Contract & Permits","Clear written contract. We file all DOB permits and schedule required inspections."],
-              ["Materials","We order materials with you or per spec — name brands, no bait & switch."],
-              ["Construction","Daily clean-up, dust barriers, and a single project manager you can call any time."],
-              ["Final Walk-Through","Punch list, final inspection sign-off, and warranty paperwork in your hands."],
-            ].map(([t,d],i) => (
-              <li key={t} className="border-t-4 border-accent bg-white/5 p-4">
-                <div className="text-3xl font-black text-[var(--brand-yellow)]">{i+1}</div>
-                <div className="mt-1 text-sm font-black uppercase">{t}</div>
-                <p className="mt-1 text-xs text-white/80">{d}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Service Area + Hours / Map */}
+      {/* Hours / Map */}
       <section id="service-area" className="border-b border-border bg-secondary">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:grid-cols-2">
           <div>
-            <div className="text-xs font-bold uppercase tracking-widest text-accent">Where We Work</div>
-            <h2 className="text-3xl font-black uppercase text-primary">Service Area</h2>
+            <div className="text-xs font-bold uppercase tracking-widest text-accent">Coverage & Hours</div>
+            <h2 className="text-3xl font-black uppercase text-primary">Serving All 5 Boroughs of NYC</h2>
             <p className="mt-2 text-sm text-foreground">
-              Based in Bellerose, Queens — we serve all of NYC and Nassau County. We are most active in the following neighborhoods:
+              Headquartered in Bellerose, Queens — Alliance General Contractors proudly operates across all five boroughs of New York City: <strong>Queens, Brooklyn, the Bronx, Manhattan and Staten Island</strong> — plus Nassau County and western Long Island. Free on-site estimates anywhere in our service area.
             </p>
-            <ul className="mt-4 grid grid-cols-2 gap-y-1 text-sm md:grid-cols-3">
-              {areas.map(a => <li key={a}>▸ {a}, NY</li>)}
-            </ul>
             <div className="mt-6 border-2 border-primary bg-card p-4 text-sm">
               <div className="font-black uppercase text-primary">Office Hours</div>
               <table className="mt-2 w-full">
