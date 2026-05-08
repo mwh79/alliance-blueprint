@@ -32,12 +32,6 @@ const services = [
   { t: "Violation Removal", d: "DOB & ECB violation removal, permit expediting and Certificate of Occupancy work." },
 ];
 
-const areas = [
-  "Bellerose", "Floral Park", "Glen Oaks", "Bayside", "Douglaston", "Little Neck",
-  "Whitestone", "Flushing", "Fresh Meadows", "Jamaica Estates", "Forest Hills", "Kew Gardens",
-  "Astoria", "Long Island City", "Garden City", "New Hyde Park", "Great Neck", "Manhasset",
-];
-
 const stats = [
   { n: "15+", l: "Years Experience" },
   { n: "500+", l: "Projects Completed" },
@@ -79,7 +73,7 @@ function Index() {
             </div>
           </div>
           <nav className="flex flex-wrap gap-1 text-sm font-semibold uppercase">
-            {["Home","Services","Projects","About","Service Area","Reviews","Contact"].map(l => (
+            {["Home","Services","About","Coverage","Reviews","Contact"].map(l => (
               <a key={l} href={`#${l.toLowerCase().replace(/\s/g,"-")}`} className="px-3 py-2 hover:bg-secondary">{l}</a>
             ))}
             <a href={PHONE_HREF} className="ml-2 bg-accent px-4 py-2 font-black text-accent-foreground hover:brightness-95">FREE ESTIMATE</a>
