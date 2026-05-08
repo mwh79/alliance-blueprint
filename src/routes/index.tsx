@@ -88,12 +88,12 @@ function Index() {
           <div className="absolute inset-0 bg-[var(--brand-dark)]/65" />
           <div className="absolute inset-0 mx-auto grid max-w-7xl items-center gap-6 px-4 py-6 text-primary-foreground lg:grid-cols-5">
             <div className="lg:col-span-3">
-              <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs · Queens · Brooklyn · Bronx · Manhattan · Staten Island · Long Island</span>
+              <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs of NYC & Long Island</span>
               <h1 className="text-3xl font-black uppercase leading-tight md:text-5xl">
-                Queens' Trusted General Contractor for Residential & Commercial Construction
+                Alliance General Contractors Inc.
               </h1>
               <p className="mt-4 max-w-2xl text-sm text-white/90 md:text-base">
-                Family-operated since 2019 and serving all five boroughs of NYC plus Long Island from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
+                Serving all five boroughs of NYC plus Long Island from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <a href={PHONE_HREF} className="bg-accent px-5 py-3 font-black uppercase text-accent-foreground shadow-md hover:brightness-95">📞 Call {PHONE}</a>
