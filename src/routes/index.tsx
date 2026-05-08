@@ -83,10 +83,10 @@ function Index() {
 
       {/* Hero */}
       <section id="home" className="relative">
-        <div className="relative flex h-[calc(100vh-104px)] min-h-[560px] w-full flex-col overflow-hidden">
+        <div className="relative flex min-h-[calc(100dvh-64px)] w-full flex-col overflow-hidden lg:h-[calc(100dvh-104px)]">
           <img src={heroImg} alt="Alliance General Contractors crew on a Queens NY job site" width={1600} height={900} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[var(--brand-dark)]/65" />
-          <div className="absolute inset-x-0 top-0 bottom-[88px] mx-auto grid max-w-7xl items-center gap-6 px-4 py-6 text-primary-foreground lg:grid-cols-5">
+          <div className="absolute inset-x-0 top-0 bottom-[68px] mx-auto grid max-w-7xl items-center gap-6 overflow-y-auto px-4 py-4 text-primary-foreground lg:bottom-[72px] lg:grid-cols-5">
             <div className="lg:col-span-3">
               <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs of NYC & Long Island</span>
               <h1 className="text-3xl font-black uppercase leading-tight md:text-5xl">
@@ -125,11 +125,11 @@ function Index() {
           </div>
           {/* Stats strip */}
           <div className="absolute inset-x-0 bottom-0 bg-accent">
-            <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-accent-foreground/20 md:grid-cols-4">
+            <div className="mx-auto grid max-w-7xl grid-cols-4 divide-x divide-accent-foreground/20">
               {stats.map(s => (
-                <div key={s.l} className="px-4 py-4 text-center text-accent-foreground">
-                  <div className="text-2xl font-black md:text-3xl">{s.n}</div>
-                  <div className="text-xs font-semibold uppercase tracking-wider">{s.l}</div>
+                <div key={s.l} className="px-2 py-2 text-center text-accent-foreground md:py-3">
+                  <div className="text-lg font-black md:text-2xl">{s.n}</div>
+                  <div className="text-[10px] font-semibold uppercase tracking-wider md:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
