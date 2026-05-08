@@ -89,16 +89,16 @@ function Index() {
 
       {/* Hero */}
       <section id="home" className="relative">
-        <div className="relative h-[460px] w-full overflow-hidden">
+        <div className="relative h-[calc(100vh-104px)] min-h-[520px] w-full overflow-hidden">
           <img src={heroImg} alt="Alliance General Contractors crew on a Queens NY job site" width={1600} height={900} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[var(--brand-dark)]/65" />
           <div className="absolute inset-0 mx-auto flex max-w-7xl flex-col justify-center px-4 text-primary-foreground">
-            <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Queens · Brooklyn · Bronx · Manhattan · Long Island</span>
+            <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)]">Serving All 5 Boroughs · Queens · Brooklyn · Bronx · Manhattan · Staten Island · Long Island</span>
             <h1 className="max-w-3xl text-4xl font-black uppercase leading-tight md:text-5xl">
               Queens' Trusted General Contractor for Residential & Commercial Construction
             </h1>
             <p className="mt-4 max-w-2xl text-base text-white/90 md:text-lg">
-              Family-operated since 2019 and serving all of NYC from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
+              Family-operated since 2019 and serving all five boroughs of NYC plus Long Island from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href={PHONE_HREF} className="bg-accent px-6 py-3 font-black uppercase text-accent-foreground shadow-md hover:brightness-95">📞 Call {PHONE}</a>
