@@ -87,18 +87,18 @@ function Index() {
           <div className="absolute inset-0 bg-[var(--brand-dark)]/70" />
           <div className="relative mx-auto grid w-full max-w-7xl items-center gap-5 px-4 py-6 text-primary-foreground sm:py-8 lg:grid-cols-5 lg:gap-6 lg:py-10">
             <div className="lg:col-span-3">
-              <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[var(--brand-yellow)] sm:text-xs">Serving All 5 Boroughs of NYC & Long Island</span>
+              <span className="mb-2 inline-block w-fit border-l-4 border-accent bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[var(--brand-yellow)] sm:text-sm">Serving All 5 Boroughs of NYC & Long Island</span>
               <h1 className="text-2xl font-black uppercase leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
                 Alliance General Contractors Inc.
               </h1>
-              <p className="mt-3 max-w-2xl text-xs text-white/90 sm:text-sm md:text-base">
+              <p className="mt-3 max-w-2xl text-sm text-white/90 sm:text-base md:text-lg">
                 Serving all five boroughs of NYC plus Long Island from our Bellerose office. From kitchen remodels and home additions to roofing, siding and full commercial build-outs — we deliver on-time, on-budget projects with no surprises.
               </p>
               <div className="mt-4 flex flex-wrap gap-2 sm:gap-3">
-                <a href={PHONE_HREF} className="bg-accent px-4 py-2.5 text-xs font-black uppercase text-accent-foreground shadow-md hover:brightness-95 sm:px-5 sm:py-3 sm:text-sm">📞 Call {PHONE}</a>
-                <a href="#services" className="border-2 border-white px-4 py-2.5 text-xs font-black uppercase text-white hover:bg-white hover:text-[var(--brand-dark)] sm:px-5 sm:py-3 sm:text-sm">View Services</a>
+                <a href={PHONE_HREF} className="bg-accent px-4 py-2.5 text-sm font-black uppercase text-accent-foreground shadow-md hover:brightness-95 sm:px-5 sm:py-3 sm:text-base">📞 Call {PHONE}</a>
+                <a href="#services" className="border-2 border-white px-4 py-2.5 text-sm font-black uppercase text-white hover:bg-white hover:text-[var(--brand-dark)] sm:px-5 sm:py-3 sm:text-base">View Services</a>
               </div>
-              <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-xs sm:text-sm md:grid-cols-4">
+              <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-2 text-sm sm:text-base md:grid-cols-4 sm:mt-10">
                 <li>✔ Licensed & Insured</li>
                 <li>✔ Free Estimates</li>
                 <li>✔ Workers' Comp</li>
@@ -106,9 +106,9 @@ function Index() {
               </ul>
             </div>
             <aside className="border-2 border-primary bg-card p-3 text-foreground shadow-2xl sm:p-4 lg:col-span-2">
-              <div className="border-b-2 border-accent pb-2 text-base font-black uppercase text-primary sm:text-lg">Get a Free Estimate</div>
-              <p className="mt-1 text-xs text-muted-foreground">No obligation · Fast response</p>
-              <form className="mt-2 grid gap-2 text-sm sm:mt-3">
+              <div className="border-b-2 border-accent pb-2 text-lg font-black uppercase text-primary sm:text-xl">Get a Free Estimate</div>
+              <p className="mt-1 text-sm text-muted-foreground">No obligation · Fast response</p>
+              <form className="mt-2 grid gap-2 text-base sm:mt-3">
                 <input className="border border-input bg-background px-3 py-2" placeholder="Full Name" />
                 <input className="border border-input bg-background px-3 py-2" placeholder="Phone Number" />
                 <input className="border border-input bg-background px-3 py-2" placeholder="Email Address" />
@@ -117,7 +117,7 @@ function Index() {
                   {services.map(s => <option key={s.t}>{s.t}</option>)}
                 </select>
                 <textarea className="border border-input bg-background px-3 py-2" rows={2} placeholder="Briefly describe your project" />
-                <button type="button" className="bg-accent py-2.5 font-black uppercase text-accent-foreground hover:brightness-95 sm:py-3">Request Estimate</button>
+                <button type="button" className="bg-accent py-2.5 text-base font-black uppercase text-accent-foreground hover:brightness-95 sm:py-3">Request Estimate</button>
               </form>
             </aside>
           </div>
