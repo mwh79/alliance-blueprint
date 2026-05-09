@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-construction.jpg";
+import logoImg from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -62,7 +63,7 @@ function Index() {
       <header className="border-b-4 border-accent bg-card">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary text-primary-foreground font-black text-xl sm:h-14 sm:w-14 sm:text-2xl">A</div>
+            <img src={logoImg} alt="Alliance General Contractors Inc logo" className="h-10 w-10 shrink-0 object-contain sm:h-14 sm:w-14" />
             <div className="min-w-0">
               <div className="text-sm font-black uppercase tracking-tight text-primary leading-tight sm:text-xl">Alliance General<br className="hidden sm:inline"/> Contractors Inc.</div>
               <div className="hidden text-xs uppercase tracking-widest text-muted-foreground sm:block">Building Trust With Quality Work · Est. 2019</div>
